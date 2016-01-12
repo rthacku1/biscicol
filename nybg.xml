@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<fims>
+
+
+-<metadata queryTarget="http://data.biscicol.org/ds" target="http://data.biscicol.org/ds/data" eml_location="eml_location" shortname="NYBG" doi="a doi">
+
+<![CDATA[Some explanatory TEXT..]]>
+
+</metadata>
+
+
+-<validation>
+
+
+-<worksheet sheetname="Samples">
+
+<rule level="error" type="duplicateColumnNames"/>
+
+<rule level="error" type="uniqueValue" column="UUID"/>
+
+<rule level="error" type="uniqueValue" column="recordNumber"/>
+
+<rule level="error" type="validForURI" column="UUID"/>
+
+
+-<rule level="error" type="RequiredColumns" column="RequiredColumns">
+
+<field>UUID</field>
+
+<field>Family</field>
+
+<field>recordedBy</field>
+
+<field>verbatimEventDate</field>
+
+<field>habitat</field>
+
+<field>habit</field>
+
+<field>decimalLatitude</field>
+
+<field>decimalLongitude</field>
+
+<field>minimumElevationInMeters</field>
+
+<field>useRecordedBy</field>
+
+</rule>
+
+
+-<rule level="warning" type="RequiredColumns" column="RequiredColumns">
+
+<field>genus</field>
+
+<field>specificEpithet</field>
+
+</rule>
+
+<rule level="warning" type="controlledVocabulary" column="majorGroup" list="majorGroup"/>
+
+<rule level="warning" type="controlledVocabulary" column="taxonRank" list="taxonRank"/>
+
+<rule level="error" type="controlledVocabulary" column="country" list="country"/>
+
+<rule level="error" type="controlledVocabulary" column="stateProvince" list="stateProvince"/>
+
+<rule level="error" type="controlledVocabulary" column="island" list="island"/>
+
+</worksheet>
+
+
+-<lists>
+
+
+-<list caseInsensitive="false" alias="majorGroup">
+
+<field>bryophyte</field>
+
+<field>moss</field>
+
+<field>lycophyte</field>
+
+<field>fern</field>
+
+<field>monocot</field>
+
+<field>dicot</field>
+
+</list>
+
+
+-<list caseInsensitive="false" alias="taxonRank">
+
+<field>kingdom</field>
+
+<field>phylum</field>
+
+<field>subphylum</field>
+
+<field>class</field>
+
+<field>subclass</field>
+
+<field>order</field>
+
+<field>suborder</field>
+
+<field>family</field>
+
+<field>subfamily</field>
+
+<field>tribe</field>
+
+<field>subtribe</field>
+
+<field>genus</field>
+
+<field>subgenus</field>
+
+<field>section</field>
+
+<field>subsection</field>
+
+<field>series</field>
+
+<field>subseries</field>
+
+<field>species</field>
+
+<field>subspecies</field>
+
+<field>variety</field>
+
+<field>subvariety</field>
+
+<field>form</field>
+
+<field>subform</field>
+
+</list>
+
+
+-<list caseInsensitive="false" alias="country">
+
+<field>Vanuatu</field>
+
+</list>
+
+
+-<list caseInsensitive="false" alias="stateProvince">
+
+<field>Tafea </field>
+
+<field>Torba </field>
+
+<field>Shefa</field>
+
+<field>Sanma</field>
+
+<field>Penama</field>
+
+<field>Malampa</field>
+
+</list>
+
+
+-<list caseInsensitive="false" alias="island">
+
+<field>Tanna</field>
+
+<field>Aniwa</field>
+
+<field>Futuna</field>
+
+<field>Erromango</field>
+
+<field>Aneityum</field>
+
+</list>
+
+</lists>
+
+</validation>
+
+
+-<mapping>
+
+
+-<entity entityId="1" conceptURI="http://www.w3.org/2000/01/rdf-schema#Resource" conceptAlias="Resource" worksheetUniqueKey="UUID" worksheet="Samples">
+
+
+-<attribute column="UUID" defined_by="http://rs.tdwg.org/dwc/terms/occurrenceID" uri="urn:UUID">
+
+<![CDATA[A Globally Unique Identifier unique to each entry that increases search capabilities.]]>
+
+</attribute>
+
+
+-<attribute column="majorGroup" defined_by="urn:majorGroup" uri="urn:majorGroup">
+
+<![CDATA[A general indicator to easily sort meaningful groups of specimens.]]>
+
+</attribute>
+
+
+-<attribute column="family" defined_by="http://rs.tdwg.org/dwc/terms/family" uri="urn:family">
+
+<![CDATA[The full scientific name of the family in which the taxon is classified.]]>
+
+</attribute>
+
+
+-<attribute column="genus" defined_by="http://rs.tdwg.org/dwc/terms/genus" uri="urn:genus">
+
+<![CDATA[The full scientific name of the genus in which the taxon is classified.]]>
+
+</attribute>
+
+
+-<attribute column="specificEpithet" defined_by="http://rs.tdwg.org/dwc/terms/specificEpithet" uri="urn:specificEpithet">
+
+<![CDATA[The name of the first or species epithet of the scientificName.]]>
+
+</attribute>
+
+
+-<attribute column="scientificNameAuthorship" defined_by="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship" uri="urn:scientificNameAuthorship">
+
+<![CDATA[The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode.]]>
+
+</attribute>
+
+
+-<attribute column="infraspecificEpithet" defined_by="http://rs.tdwg.org/dwc/terms/infraspecificEpithet" uri="urn:infraspecificEpithet">
+
+<![CDATA[The name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.]]>
+
+</attribute>
+
+
+-<attribute column="taxonRank" defined_by="http://rs.tdwg.org/dwc/terms/taxonRank" uri="urn:taxonRank">
+
+<![CDATA[The taxonomic rank of the most specific name in the scientificName.]]>
+
+</attribute>
+
+
+-<attribute column="identifiedBy" defined_by="http://rs.tdwg.org/dwc/terms/identifiedBy" uri="urn:identifiedBy">
+
+<![CDATA[A list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject.]]>
+
+</attribute>
+
+
+-<attribute column="recordedBy" defined_by="http://rs.tdwg.org/dwc/terms/recordedBy" uri="urn:recordedBy">
+
+<![CDATA[A list (concatenated and separated) of names of people, groups, or organizations responsible for recording the original Occurrence. The primary collector or observer, especially one who applies a personal identifier (recordNumber), should be listed first.]]>
+
+</attribute>
+
+
+-<attribute column="recordNumber" defined_by="http://rs.tdwg.org/dwc/terms/recordNumber" uri="urn:recordNumber">
+
+<![CDATA[An identifier given to the Occurrence at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector's number.]]>
+
+</attribute>
+
+
+-<attribute column="verbatimEventDate" defined_by="http://rs.tdwg.org/dwc/terms/verbatimEventDate" uri="urn:verbatimEventDate">
+
+<![CDATA[The verbatim original representation of the date and time information for an Event.]]>
+
+</attribute>
+
+
+-<attribute column="country" defined_by="http://rs.tdwg.org/dwc/terms/country" uri="urn:country">
+
+<![CDATA[The name of the country or major administrative unit in which the Location occurs.]]>
+
+</attribute>
+
+
+-<attribute column="stateProvince" defined_by="http://rs.tdwg.org/dwc/terms/stateProvince" uri="urn:stateProvince">
+
+<![CDATA[The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.]]>
+
+</attribute>
+
+
+-<attribute column="island" defined_by="http://rs.tdwg.org/dwc/terms/island" uri="urn:island">
+
+<![CDATA[The name of the island on or near which the Location occurs.]]>
+
+</attribute>
+
+
+-<attribute column="location" defined_by="http://rs.tdwg.org/dwc/terms/location" uri="urn:location">
+
+<![CDATA[A spatial region or named place.]]>
+
+</attribute>
+
+
+-<attribute column="verbatimLocality" defined_by="http://rs.tdwg.org/dwc/terms/verbatimLocality" uri="urn:verbatimLocality">
+
+<![CDATA[The original textual description of the place.]]>
+
+</attribute>
+
+
+-<attribute column="habitat" defined_by="http://rs.tdwg.org/dwc/terms/habitat" uri="urn:habitat">
+
+<![CDATA[A category or description of the habitat in which the Event occurred.]]>
+
+</attribute>
+
+
+-<attribute column="habit" defined_by="http://rs.tdwg.org/dwc/terms/organismRemarks" uri="urn:habit">
+
+<![CDATA[Comments or notes about the Organism instance.]]>
+
+</attribute>
+
+
+-<attribute column="preparations" defined_by="http://rs.tdwg.org/dwc/terms/preparations" uri="urn:preparations">
+
+<![CDATA[A list (concatenated and separated) of preparations and preservation methods for a specimen.]]>
+
+</attribute>
+
+
+-<attribute column="decimalLatitude" defined_by="http://rs.tdwg.org/dwc/terms/decimalLatitude" uri="urn:decimalLatitude">
+
+<![CDATA[The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive.]]>
+
+</attribute>
+
+
+-<attribute column="decimalLongitude" defined_by="http://rs.tdwg.org/dwc/terms/decimalLongitude" uri="urn:decimalLongitude">
+
+<![CDATA[The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive.]]>
+
+</attribute>
+
+
+-<attribute column="minimumElevationInMeters" defined_by="http://rs.tdwg.org/dwc/terms/minimumElevationInMeters" uri="urn:minimumElevationInMeters">
+
+<![CDATA[The lower limit of the range of elevation (altitude, usually above sea level), in meters.]]>
+
+</attribute>
+
+
+-<attribute column="vernacularName" defined_by="http://rs.tdwg.org/dwc/terms/vernacularName" uri="urn:vernacularName">
+
+<![CDATA[The name of the specimen in the local language.]]>
+
+</attribute>
+
+
+-<attribute column="vernacularLanguage" defined_by="http://purl.org/dc/terms/language" uri="urn:vernacularLanguage">
+
+<![CDATA[The language in which the plant name is recorded.]]>
+
+</attribute>
+
+
+-<attribute column="specimenUse" defined_by="urn:specimenUse" uri="urn:specimenUse">
+
+<![CDATA[The cultural or economic use of the plant specimen.]]>
+
+</attribute>
+
+
+-<attribute column="useSource" defined_by="urn:useSource" uri="urn:useSource">
+
+<![CDATA[The source that proffered plant use information.]]>
+
+</attribute>
+
+
+-<attribute column="useRecordedBy" defined_by="urn:useRecordedBy" uri="urn:useRecordedBy">
+
+<![CDATA[The name of the collector that documented the plant use information.]]>
+
+</attribute>
+
+</entity>
+
+</mapping>
+
+</fims>
