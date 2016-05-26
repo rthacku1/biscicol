@@ -133,6 +133,7 @@
 		<attribute column='vernacularName' uri='urn:vernacularName' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
 		<attribute column='vernacularLanguage' uri='urn:vernacularLanguage' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
 		<attribute column='specimenUse' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Classification of use according to Econ Bot]]></attribute>
 		<attribute column='useSource' uri='urn:useSource' defined_by='urn:useSource'><![CDATA[The source that proffered plant use information.]]></attribute>
 		<attribute column='useRecordedBy' uri='urn:useRecordedBy' defined_by='urn:useRecordedBy'><![CDATA[The name of the collector that documented the plant use information.]]></attribute>
       </entity>
