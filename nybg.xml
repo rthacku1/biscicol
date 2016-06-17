@@ -11,52 +11,68 @@
         <![CDATA[Some explanatory TEXT..]]>
     </metadata>
     <validation>
+       
+	    <worksheet sheetname='Samples'>
 
-        <worksheet sheetname='Samples'>
+		<rule type='duplicateColumnNames' level='error'></rule>
 
-            <rule type='duplicateColumnNames' level='error'></rule>
+		<rule type='uniqueValue' column='UUID' level='error'></rule>
+		<rule type='uniqueValue' column='recordNumber' level='error'></rule>
+		<rule type='validForURI' column='UUID' level='error'></rule>
+			
+		<rule type='validateNumeric' column='Latitude Decimal' level='error' value='%3E%3D-90+and+%3C%3D90'></rule> 
+		<ruletype='validateNumeric' column='Longitude Decimal' level='error' value='%3E%3D-180+and+%3C%3D180'></rule>
+			
+		<rule type='isNumber' column='minimumElevationInMeters' level='error'></rule>
+        
+		<rule type='RequiredColumns' column='RequiredColumns' level='error'>
+			<field>UUID</field>
+			<field>recordedBy</field>
+			<field>recordNumber</field>
+		</rule>			
+          
+		<rule type='RequiredColumns' column='RequiredColumns' level='warning'>
+			<field>family</field>
+			<field>genus</field>
+			<field>specificEpithet</field>
+			<field>eventDate</field>
+			<field>habitat</field>
+			<field>habit</field>
+			<field>decimalLatitude</field>
+			<field>decimalLongitude</field>
+			<field>minimumElevationInMeters</field>
+		</rule>
+			
+		<rule type='controlledVocabulary' column='majorGroup' list='majorGroup' level='error'></rule>
+		<rule type='controlledVocabulary' column='taxonRank' list='taxonRank' level='error'></rule>
+		<rule type='controlledVocabulary' column='country' list='country' level='error'></rule>
+		<rule type='controlledVocabulary' column='stateProvince' list='stateProvince' level='error'></rule>
+		<rule type='controlledVocabulary' column='island' list='island' level='error'></rule>
+			
+		<rule type='controlledVocabulary' column='useClassification1' list='useClassification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='useClassification2' list='useClassification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='useClassification3' list='useClassification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='useClassification4' list='useClassification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='useClassification5' list='useClassification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='useClassification6' list='useClassification' level='warning'></rule>
 
-            <rule type='uniqueValue' column='UUID' level='error'></rule>
-            <rule type='uniqueValue' column='recordNumber' level='error'></rule>
-            <rule type='validForURI' column='UUID' level='error'></rule>
-
-            <rule type='RequiredColumns' column='RequiredColumns' level='error'>
-                <field>UUID</field>
-                <field>family</field>
-                <field>recordedBy</field>
-                <field>eventDate</field>
-                <field>habitat</field>
-                <field>habit</field>
-                <field>decimalLatitude</field>
-                <field>decimalLongitude</field>
-                <field>minimumElevationInMeters</field>
-            </rule>
-            <rule type='RequiredColumns' column='RequiredColumns' level='warning'>
-                <field>genus</field>
-                <field>specificEpithet</field>
-            </rule>
-
-            <rule type='controlledVocabulary' column='majorGroup' list='majorGroup' level='error'></rule>
-            <rule type='controlledVocabulary' column='taxonRank' list='taxonRank' level='error'></rule>
-            <rule type='controlledVocabulary' column='country' list='country' level='error'></rule>
-            <rule type='controlledVocabulary' column='stateProvince' list='stateProvince' level='error'></rule>
-            <rule type='controlledVocabulary' column='island' list='island' level='error'></rule>
-            <rule type='controlledVocabulary' column='useClassification1' list='useClassification' level='warning'></rule>
-            <rule type='controlledVocabulary' column='useClassification2' list='useClassification' level='warning'></rule>
-            <rule type='controlledVocabulary' column='useClassification3' list='useClassification' level='warning'></rule>
-            <rule type='controlledVocabulary' column='useClassification4' list='useClassification' level='warning'></rule>
-            <rule type='controlledVocabulary' column='useClassification5' list='useClassification' level='warning'></rule>
-            <rule type='controlledVocabulary' column='useClassification6' list='useClassification' level='warning'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification1' level='warning' otherColumn='specimenUse1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification2' level='warning' otherColumn='specimenUse2'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification3' level='warning' otherColumn='specimenUse3'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification4' level='warning' otherColumn='specimenUse4'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification5' level='warning' otherColumn='specimenUse5'></rule>
+		<rule type='requiredValueFromOtherColumn' column='useClassification6' level='warning' otherColumn='specimenUse6'></rule>
+						
         </worksheet>
 
 	<lists>
 		<list alias='majorGroup' caseInsensitive='false'>
-			<field>bryophyte</field>
-			<field>moss</field>
-			<field>lycophyte</field>
-			<field>fern</field>
-			<field>monocot</field>
-			<field>dicot</field>
+			<field>Bryophyte</field>
+			<field>Moss</field>
+			<field>Lycophyte</field>
+			<field>Fern</field>
+			<field>Monocot</field>
+			<field>Dicot</field>
 		</list>
 		<list alias='taxonRank' caseInsensitive='false'>
 			<field>family</field>
@@ -128,6 +144,7 @@
 		<attribute column='scientificNameAuthorship' uri='urn:scientificNameAuthorship' defined_by='http://rs.tdwg.org/dwc/terms/scientificNameAuthorship'><![CDATA[The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode.]]></attribute>
 		<attribute column='infraspecificEpithet' uri='urn:infraspecificEpithet' defined_by='http://rs.tdwg.org/dwc/terms/infraspecificEpithet'><![CDATA[The name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.]]></attribute>
 		<attribute column='taxonRank' uri='urn:taxonRank' defined_by='http://rs.tdwg.org/dwc/terms/taxonRank'><![CDATA[The taxonomic rank of the most specific name in the scientificName.]]></attribute>
+		<attribute column='identificationQualifier' uri='urn:identificationQualifier' defined_by='http://rs.tdwg.org/dwc/terms/identificationQualifier'><![CDATA[A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the Identification.]]></attribute>
 		<attribute column='identifiedBy' uri='urn:identifiedBy' defined_by='http://rs.tdwg.org/dwc/terms/identifiedBy'><![CDATA[A list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject.]]></attribute>
 		<attribute column='dateIdentified' uri='urn:dateIdentified' defined_by='http://rs.tdwg.org/dwc/terms/dateIdentified'><![CDATA[The date on which the subject was identified as representing the Taxon. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).]]></attribute>
 		<attribute column='useRecordedBy' uri='urn:useRecordedBy' defined_by='urn:useRecordedBy'><![CDATA[The name of the collector that documented the plant use information.]]></attribute>
