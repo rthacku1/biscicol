@@ -20,8 +20,8 @@
 		<rule type='uniqueValue' column='recordNumber' level='error'></rule>
 		<rule type='validForURI' column='UUID' level='error'></rule>
 			
-		<rule type='validateNumeric' column='Latitude Decimal' level='error' value='%3E%3D-90+and+%3C%3D90'></rule> 
-		<rule type='validateNumeric' column='Longitude Decimal' level='error' value='%3E%3D-180+and+%3C%3D180'></rule>
+		<rule type='validateNumeric' column='decimalLatitude' level='error' value='%3E%3D-90+and+%3C%3D90'></rule> 
+		<rule type='validateNumeric' column='decimalLongitude' level='error' value='%3E%3D-180+and+%3C%3D180'></rule>
 			
 		<rule type='isNumber' column='minimumElevationInMeters' level='error'></rule>
         
