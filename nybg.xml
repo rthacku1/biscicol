@@ -153,18 +153,18 @@
 		<attribute column='vernacularName1' uri='urn:vernacularName' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
 		<attribute column='vernacularLanguage2' uri='urn:vernacularLanguage' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
 		<attribute column='vernacularName2' uri='urn:vernacularName' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
-		<attribute column='specimenUse1' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification1' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='specimenUse2' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification2' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='specimenUse3' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification3' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='specimenUse4' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification4' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='specimenUse5' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification5' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='specimenUse6' uri='urn:specimenUse' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='useClassification6' uri='urn:useClassification' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse1' uri='urn:specimenUse1' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification1' uri='urn:useClassification1' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse2' uri='urn:specimenUse2' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification2' uri='urn:useClassification2' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse3' uri='urn:specimenUse3' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification3' uri='urn:useClassification3' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse4' uri='urn:specimenUse4' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification4' uri='urn:useClassification4' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse5' uri='urn:specimenUse5' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification5' uri='urn:useClassification5' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='specimenUse6' uri='urn:specimenUse6' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='useClassification6' uri='urn:useClassification6' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
       </entity>
     </mapping>
 
