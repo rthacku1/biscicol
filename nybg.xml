@@ -42,8 +42,8 @@
 			
 		<rule type='controlledVocabulary' column='Major Group' list='Major Group' level='error'></rule>
 		<rule type='controlledVocabulary' column='Infraspecific Rank' list='Infraspecific Rank' level='error'></rule>
-		<rule type='controlledVocabulary' column='Country' list='country' level='error'></rule>
-		<rule type='controlledVocabulary' column='State Province' list='stateProvince' level='error'></rule>
+		<rule type='controlledVocabulary' column='Country' list='Country' level='error'></rule>
+		<rule type='controlledVocabulary' column='State Province' list='State Province' level='error'></rule>
 		<rule type='controlledVocabulary' column='Island' list='Island' level='error'></rule>
 		<rule type='controlledVocabulary' column='Collector' list='Collector' level='error'></rule>
 		<rule type='controlledVocabulary' column='Coordinate System' list='Coordinate System' level='error'></rule>    
