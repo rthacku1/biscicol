@@ -49,21 +49,21 @@
 		<rule type='controlledVocabulary' column='Coordinate System' list='Coordinate System' level='error'></rule>    
 		
 		<rule type='controlledVocabulary' column='Identification Qualifier' list='Identification Qualifier' level='warning'></rule>	
-		<rule type='controlledVocabulary' column='Use Category1' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Category2' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Category3' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Category4' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Category5' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Category6' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification1' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification2' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification3' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification4' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification5' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification6' list='Use Classification' level='warning'></rule>
 
-		<rule type='requiredValueFromOtherColumn' column='Use Category1' level='warning' otherColumn='Use Preparation1'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Source' level='warning' otherColumn='Use Preparation1'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Recorded By' level='warning' otherColumn='Use Preparation1'></rule>    
-		<rule type='requiredValueFromOtherColumn' column='Use Category2' level='warning' otherColumn='Use Preparation2'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Category3' level='warning' otherColumn='Use Preparation3'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Category4' level='warning' otherColumn='Use Preparation4'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Category5' level='warning' otherColumn='Use Preparation5'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Category6' level='warning' otherColumn='Use Preparation6'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification1' level='warning' otherColumn='Specimen Use1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Source' level='warning' otherColumn='Specimen Use1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Recorded By' level='warning' otherColumn='Specimen Use1'></rule>    
+		<rule type='requiredValueFromOtherColumn' column='Use Classification2' level='warning' otherColumn='Specimen Use2'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification3' level='warning' otherColumn='Specimen Use3'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification4' level='warning' otherColumn='Specimen Use4'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification5' level='warning' otherColumn='Specimen Use5'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification6' level='warning' otherColumn='Specimen Use6'></rule>
 		<rule type='requiredValueFromOtherColumn' column='Infraspecific Rank' level='warning' otherColumn='Infraspecific Epithet'></rule>
 		    
         </worksheet>
@@ -185,4 +185,4 @@
       </entity>
     </mapping>
 
-</fims>
+</fims
