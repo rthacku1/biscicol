@@ -11,22 +11,25 @@
         <![CDATA[Some explanatory TEXT..]]>
     </metadata>
     <validation>
-       
+
 	    <worksheet sheetname='Samples'>
 
 		<rule type='duplicateColumnNames' level='error'></rule>
-			
-		<rule type='validateNumeric' column='Decimal Latitude' level='error' value='%3E%3D-90+and+%3C%3D90'></rule> 
+
+		<rule type='validateNumeric' column='Decimal Latitude' level='error' value='%3E%3D-90+and+%3C%3D90'></rule>
 		<rule type='validateNumeric' column='Decimal Longitude' level='error' value='%3E%3D-180+and+%3C%3D180'></rule>
-			
-		<rule type='isNumber' column='minimumElevationInMeters' level='error'></rule>
-		<rule type='isNumber' column='Collector Number' level='error'></rule>    
-        
+
+		<rule type='isNumber' column='Elevation in Meters' level='error'></rule>
+		<rule type='isNumber' column='Collector Number' level='error'></rule>
+    		<rule type='isNumber' column='Duplicate No.' level='error'></rule>
+   		<rule type='isNumber' column='Label No.' level='error'></rule>
+   		<rule type='isNumber' column='Trip No.' level='error'></rule>
+		    
 		<rule type='RequiredColumns' column='RequiredColumns' level='error'>
 			<field>Collector</field>
 			<field>Collector Number</field>
-		</rule>			
-          
+		</rule>
+
 		<rule type='RequiredColumns' column='RequiredColumns' level='warning'>
 			<field>Family</field>
 			<field>Genus</field>
@@ -39,43 +42,44 @@
 			<field>Decimal Longitude</field>
 			<field>Elevation In Meters</field>
 		</rule>
-			
+
 		<rule type='controlledVocabulary' column='Major Group' list='Major Group' level='error'></rule>
 		<rule type='controlledVocabulary' column='Infraspecific Rank' list='Infraspecific Rank' level='error'></rule>
 		<rule type='controlledVocabulary' column='Country' list='Country' level='error'></rule>
 		<rule type='controlledVocabulary' column='State Province' list='State Province' level='error'></rule>
 		<rule type='controlledVocabulary' column='Island' list='Island' level='error'></rule>
 		<rule type='controlledVocabulary' column='Collector' list='Collector' level='error'></rule>
-		<rule type='controlledVocabulary' column='Coordinate System' list='Coordinate System' level='error'></rule>    
-		
-		<rule type='controlledVocabulary' column='Identification Qualifier' list='Identification Qualifier' level='warning'></rule>	
-		<rule type='controlledVocabulary' column='Use Classification1' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Classification2' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Classification3' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Classification4' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Classification5' list='Use Classification' level='warning'></rule>
-		<rule type='controlledVocabulary' column='Use Classification6' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Coordinate System' list='Coordinate System' level='error'></rule>
 
-		<rule type='requiredValueFromOtherColumn' column='Use Classification1' level='warning' otherColumn='Specimen Use1'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Source' level='warning' otherColumn='Specimen Use1'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Recorded By' level='warning' otherColumn='Specimen Use1'></rule>    
-		<rule type='requiredValueFromOtherColumn' column='Use Classification2' level='warning' otherColumn='Specimen Use2'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Classification3' level='warning' otherColumn='Specimen Use3'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Classification4' level='warning' otherColumn='Specimen Use4'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Classification5' level='warning' otherColumn='Specimen Use5'></rule>
-		<rule type='requiredValueFromOtherColumn' column='Use Classification6' level='warning' otherColumn='Specimen Use6'></rule>
+		<rule type='controlledVocabulary' column='Identification Qualifier' list='Identification Qualifier' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 1' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 2' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 3' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 4' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 5' list='Use Classification' level='warning'></rule>
+		<rule type='controlledVocabulary' column='Use Classification 6' list='Use Classification' level='warning'></rule>
+
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 1' level='warning' otherColumn='Specimen Use 1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Source' level='warning' otherColumn='Specimen Use 1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Recorded By' level='warning' otherColumn='Specimen Use 1'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 2' level='warning' otherColumn='Specimen Use 2'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 3' level='warning' otherColumn='Specimen Use 3'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 4' level='warning' otherColumn='Specimen Use 4'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 5' level='warning' otherColumn='Specimen Use 5'></rule>
+		<rule type='requiredValueFromOtherColumn' column='Use Classification 6' level='warning' otherColumn='Specimen Use 6'></rule>
 		<rule type='requiredValueFromOtherColumn' column='Infraspecific Rank' level='warning' otherColumn='Infraspecific Epithet'></rule>
-		    
+
         </worksheet>
 
 	<lists>
 		<list alias='Major Group' caseInsensitive='false'>
-			<field>Bryophyte</field>
-			<field>Moss</field>
-			<field>Lycophyte</field>
-			<field>Fern</field>
-			<field>Monocot</field>
-			<field>Dicot</field>
+			<field>0-Alga</field>
+			<field>1-Bryophyte</field>
+			<field>2a-Lycophyte</field>
+			<field>2b-Fern</field>
+			<field>3-Gymnosperm</field>
+			<field>4-Monocot</field>
+      <field>5-Dicot</field>
 		</list>
 		<list alias='Infraspecific Rank' caseInsensitive='false'>
 			<field>ssp.</field>
@@ -86,7 +90,12 @@
 			<field>Vanuatu</field>
 		</list>
 		<list alias='State Province' caseInsensitive='false'>
-			<field>Tafea </field>
+			<field>Malampa</field>
+     			<field>Penama</field>
+      			<field>Sanma</field>
+      			<field>Shefa</field>
+      			<field>Tafea</field>
+      			<field>Torba</field>
 		</list>
 		<list alias='Island' caseInsensitive='false'>
 			<field>Tanna</field>
@@ -96,18 +105,15 @@
 			<field>Aneityum</field>
 		</list>
 		<list alias='Use Classification' caseInsensitive='false'>
-			<field>food</field>
-			<field>food additives</field>
-			<field>vertebrate food</field>
-			<field>invertebrate food</field>
-			<field>apicolous</field>
+      			<field>animal food</field>
+    			<field>environmental</field>
+      			<field>food</field>
 			<field>fuel</field>
-			<field>materials</field>
-			<field>social</field>
-			<field>toxic to vertebrates</field>
-			<field>toxic to non vertebrates</field>
+			<field>material</field>
 			<field>medicinal</field>
-			<field>environmental</field>
+			<field>social</field>
+			<field>tool</field>
+			<field>toxic</field>
 		</list>
 		<list alias='Collector' caseInsensitive='false'>
 			<field>Michael J. Balick</field>
@@ -129,7 +135,7 @@
 			<field>WGS84</field>
 		</list>
 	</lists>
-		
+
     </validation>
 
     <mapping>
@@ -142,46 +148,56 @@
 		<attribute column='Country' uri='urn:country' defined_by='http://rs.tdwg.org/dwc/terms/country'><![CDATA[The name of the country or major administrative unit in which the Location occurs.]]></attribute>
 		<attribute column='State Province' uri='urn:stateProvince' defined_by='http://rs.tdwg.org/dwc/terms/stateProvince'><![CDATA[The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.]]></attribute>
 		<attribute column='Island' uri='urn:island' defined_by='http://rs.tdwg.org/dwc/terms/island'><![CDATA[The name of the island on or near which the Location occurs.]]></attribute>
-		<attribute column='Village' uri='urn:location' defined_by='http://rs.tdwg.org/dwc/terms/location'><![CDATA[A spatial region or named place.]]></attribute>
+		<attribute column='Village' uri='urn:location' defined_by='http://rs.tdwg.org/dwc/terms/location'><![CDATA[A spatial region or named place used to facilitate ethnographic analysis.]]></attribute>
 		<attribute column='Decimal Latitude' uri='urn:decimalLatitude' defined_by='http://rs.tdwg.org/dwc/terms/decimalLatitude'><![CDATA[The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive.]]></attribute>
 		<attribute column='Decimal Longitude' uri='urn:decimalLongitude' defined_by='http://rs.tdwg.org/dwc/terms/decimalLongitude'><![CDATA[The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive.]]></attribute>
 		<attribute column='Coordinate System' uri='urn:geodeticdatum' defined_by='http://rs.tdwg.org/dwc/terms/geodeticDatum'><![CDATA[The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based.]]></attribute>
 		<attribute column='Elevation In Meters' uri='urn:minimumElevationInMeters' defined_by='http://rs.tdwg.org/dwc/terms/minimumElevationInMeters'><![CDATA[The lower limit of the range of elevation (altitude, usually above sea level), in meters.]]></attribute>
 		<attribute column='Locality' uri='urn:verbatimLocality' defined_by='http://rs.tdwg.org/dwc/terms/verbatimLocality'><![CDATA[The original textual description of the place.]]></attribute>
 		<attribute column='Collection Date' uri='urn:eventDate' defined_by='http://rs.tdwg.org/dwc/terms/eventDate'><![CDATA[The date-time or interval during which an Event occurred. For occurrences, this is the date-time when the event was recorded. Not suitable for a time in a geological context. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).]]></attribute>
-		<attribute column='Collector' uri='urn:recordedBy' defined_by='http://rs.tdwg.org/dwc/terms/recordedBy'><![CDATA[A list (concatenated and separated) of names of people, groups, or organizations responsible for recording the original Occurrence. The primary collector or observer, especially one who applies a personal identifier (recordNumber), should be listed first.]]></attribute>
-		<attribute column='Collector Number' uri='urn:recordNumber' defined_by='http://rs.tdwg.org/dwc/terms/recordNumber'><![CDATA[An identifier given to the Occurrence at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector's number.]]></attribute>
+    		<attribute column='Trip No.' uri='urn:tripNumber' defined_by='urn:tripNumber'><![CDATA[A number of a sequential series, beginning at 1, used to indicate the trip during which the collector recorded the occurrence.]]></attribute>
+    		<attribute column='Permit' uri='urn:permit' defined_by='urn:permit'><![CDATA[The permit idenitifier which a regulated species may require for international transit.]]></attribute>
+		<attribute column='Shipping Box No.' uri='urn:transitNumber' defined_by='urn:transitNumber'><![CDATA[An indentifier given to the box in which the specimen was shipped. One practice is to concatenate the trip number followed by the box number: e.g. 7-1 (Trip 7, Box 1).]]></attribute>
+    		<attribute column='Collector' uri='urn:recordedBy' defined_by='http://rs.tdwg.org/dwc/terms/recordedBy'><![CDATA[The primary collector or observer, who applies a personal identifier to a voucher.]]></attribute>
+		<attribute column='Collector Number' uri='urn:recordNumber' defined_by='http://rs.tdwg.org/dwc/terms/recordNumber'><![CDATA[An identifier given to the voucher at the time it was recorded.]]></attribute>
+    		<attribute column='Associated Collectors' uri='urn:associatedCollectors' defined_by='urn:associatedCollectors'><![CDATA[A list (concatenated and separated) of names of people associated with recording the voucher.]]></attribute>
 		<attribute column='Habit' uri='urn:habit' defined_by='http://rs.tdwg.org/dwc/terms/organismRemarks'><![CDATA[Comments or notes about the Organism instance.]]></attribute>
 		<attribute column='Habitat' uri='urn:habitat' defined_by='http://rs.tdwg.org/dwc/terms/habitat'><![CDATA[A category or description of the habitat in which the Event occurred.]]></attribute>
-		<attribute column='Preparations' uri='urn:preparations' defined_by='http://rs.tdwg.org/dwc/terms/preparations'><![CDATA[A list (concatenated and separated) of preparations and preservation methods for a specimen.]]></attribute>
+		<attribute column='Materials Collected' uri='urn:preparations' defined_by='http://rs.tdwg.org/dwc/terms/preparations'><![CDATA[A list (concatenated and separated) of preparations and preservation methods for a specimen.]]></attribute>
+    		<attribute column='Voucher Note' uri='urn:voucherNote' defined_by='voucherNote'><![CDATA[Notes related to the collection event or voucher. Ethnobiological notes should be added to the Vernacular Note or Use Note fields.]]></attribute>
+    		<attribute column='Duplicate No.' uri='urn:duplicates' defined_by='urn:duplicates'><![CDATA[The number of vouchers collected for a specimen.]]></attribute>
+    		<attribute column='Label No.' uri='urn:labels' defined_by='urn:labels'><![CDATA[The number of labels to be generated in total.]]></attribute>
 		<attribute column='Major Group' uri='urn:majorGroup' defined_by='urn:majorGroup'><![CDATA[A general indicator used to sort groups of specimens for public presentation.]]></attribute>
 		<attribute column='Family' uri='urn:family' defined_by='http://rs.tdwg.org/dwc/terms/family'><![CDATA[The full scientific name of the family in which the taxon is classified.]]></attribute>
 		<attribute column='Genus' uri='urn:genus' defined_by='http://rs.tdwg.org/dwc/terms/genus'><![CDATA[The full scientific name of the genus in which the taxon is classified.]]></attribute>
-		<attribute column='Specific Epithet' uri='urn:specificEpithet' defined_by='http://rs.tdwg.org/dwc/terms/specificEpithet'><![CDATA[The name of the first or species epithet of the scientificName.]]></attribute>
-		<attribute column='Scientific Name Author' uri='urn:scientificNameAuthorship' defined_by='http://rs.tdwg.org/dwc/terms/scientificNameAuthorship'><![CDATA[The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode.]]></attribute>
-		<attribute column='Infraspecific Epithet' uri='urn:infraspecificEpithet' defined_by='http://rs.tdwg.org/dwc/terms/infraspecificEpithet'><![CDATA[The name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.]]></attribute>
-		<attribute column='Infraspecific Rank' uri='urn:taxonRank' defined_by='http://rs.tdwg.org/dwc/terms/taxonRank'><![CDATA[The taxonomic rank of the most specific name in the scientificName.]]></attribute>
+		<attribute column='Specific Epithet' uri='urn:specificEpithet' defined_by='http://rs.tdwg.org/dwc/terms/specificEpithet'><![CDATA[The name of the species epithet of the scientificName.]]></attribute>
+		<attribute column='Specific Epithet Authority' uri='urn:specificEpithetAuthority' defined_by='urn:specificEpithetAuthority'><![CDATA[The authority for the Specific Epithet formatted according to the conventions of the applicable nomenclatural code.]]></attribute>
+		<attribute column='Infraspecific Epithet' uri='urn:infraspecificEpithet' defined_by='http://rs.tdwg.org/dwc/terms/infraspecificEpithet'><![CDATA[The name of the lowest or terminal infraspecific epithet, excluding any rank designation.]]></attribute>
+    		<attribute column='Infraspecific Epithet Authority' uri='urn:infraspecificEpithetAuthority' defined_by='urn:infraspecificEpithetAuthority'><![CDATA[The authority for the Infraspecific Epithet formatted according to the conventions of the applicable nomenclaturalCode.]]></attribute>
+    		<attribute column='Infraspecific Rank' uri='urn:taxonRank' defined_by='http://rs.tdwg.org/dwc/terms/taxonRank'><![CDATA[The taxonomic rank of the most specific name in the Scientific Name.]]></attribute>
 		<attribute column='Identification Qualifier' uri='urn:identificationQualifier' defined_by='http://rs.tdwg.org/dwc/terms/identificationQualifier'><![CDATA[A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the Identification.]]></attribute>
-		<attribute column='Identified By' uri='urn:identifiedBy' defined_by='http://rs.tdwg.org/dwc/terms/identifiedBy'><![CDATA[A list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject.]]></attribute>
-		<attribute column='Date Identified' uri='urn:dateIdentified' defined_by='http://rs.tdwg.org/dwc/terms/dateIdentified'><![CDATA[The date on which the subject was identified as representing the Taxon. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).]]></attribute>
+		<attribute column='Determined By' uri='urn:determinedBy' defined_by='http://rs.tdwg.org/dwc/terms/identifiedBy'><![CDATA[A list (concatenated and separated) of names of people who assigned the Taxon to the voucher.]]></attribute>
 		<attribute column='Use Recorded By' uri='urn:useRecordedBy' defined_by='urn:useRecordedBy'><![CDATA[The name of the collector that documented the plant use information.]]></attribute>
-		<attribute column='Use Source' uri='urn:useSource' defined_by='urn:useSource'><![CDATA[A list (concatenated and separated) of names of people, groups, or organizations responsible for providing the original Use. The primary source should be listed first.]]></attribute>
-		<attribute column='Vernacular Language1' uri='urn:vernacularLanguage1' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
-		<attribute column='Vernacular Name1' uri='urn:vernacularName1' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
-		<attribute column='Vernacular Language2' uri='urn:vernacularLanguage2' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
-		<attribute column='Vernacular Name2' uri='urn:vernacularName2' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
-		<attribute column='Specimen Use1' uri='urn:specimenUse1' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification1' uri='urn:useClassification1' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='Specimen Use2' uri='urn:specimenUse2' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification2' uri='urn:useClassification2' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='Specimen Use3' uri='urn:specimenUse3' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification3' uri='urn:useClassification3' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='Specimen Use4' uri='urn:specimenUse4' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification4' uri='urn:useClassification4' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='Specimen Use5' uri='urn:specimenUse5' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification5' uri='urn:useClassification5' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
-		<attribute column='Specimen Use6' uri='urn:specimenUse6' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
-		<attribute column='Use Classification6' uri='urn:useClassification6' defined_by='urn:useClassification'><![CDATA[Twelve part classification of plant use as defined by Cook (1995) and modified by de La Torre et al. (2008).]]></attribute>
+		<attribute column='Use Source' uri='urn:useSource' defined_by='urn:useSource'><![CDATA[A list (concatenated and separated) of names of people responsible for providing the original Use. The primary source should be listed first and indicated with sex and approximate birth year e.g. Walter Lini (M, b. 1942)]]></attribute>
+		<attribute column='Vernacular Language 1' uri='urn:vernacularLanguage1' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
+		<attribute column='Vernacular Name 1' uri='urn:vernacularName1' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
+    		<attribute column='Vernacular Note 1' uri='urn:vernacularNote1' defined_by='urn:vernacularNote1'><![CDATA[Any miscellaneous information concerning the name or ethnobiological classification of the specimen.]]></attribute>
+    		<attribute column='Vernacular Language 2' uri='urn:vernacularLanguage2' defined_by='http://purl.org/dc/terms/language'><![CDATA[The language in which the plant name is recorded.]]></attribute>
+		<attribute column='Vernacular Name 2' uri='urn:vernacularName2' defined_by='http://rs.tdwg.org/dwc/terms/vernacularName'><![CDATA[The name of the specimen in the local language.]]></attribute>
+    		<attribute column='Vernacular Note 2' uri='urn:vernacularNote2' defined_by='urn:vernacularNote2'><![CDATA[Any miscellaneous information concerning the name or ethnobiological classification of the specimen.]]></attribute>
+    		<attribute column='Specimen Use 1' uri='urn:specimenUse1' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 1' uri='urn:useClassification1' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+		<attribute column='Specimen Use 2' uri='urn:specimenUse2' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 2' uri='urn:useClassification2' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+		<attribute column='Specimen Use 3' uri='urn:specimenUse3' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 3' uri='urn:useClassification3' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+		<attribute column='Specimen Use 4' uri='urn:specimenUse4' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 4' uri='urn:useClassification4' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+		<attribute column='Specimen Use 5' uri='urn:specimenUse5' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 5' uri='urn:useClassification5' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+		<attribute column='Specimen Use 6' uri='urn:specimenUse6' defined_by='urn:specimenUse'><![CDATA[The cultural or economic use of the plant specimen.]]></attribute>
+		<attribute column='Use Classification 6' uri='urn:useClassification6' defined_by='urn:useClassification'><![CDATA[Classification of plant use to level 1 based on Cook (1995).]]></attribute>
+    		<attribute column='Use Note' uri='urn:useNote' defined_by='urn:useNote'><![CDATA[Ethnobotanical notes related to the specimen.]]></attribute>
       </entity>
     </mapping>
 
